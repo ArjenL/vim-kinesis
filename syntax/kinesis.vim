@@ -28,8 +28,8 @@ syn match knsLocationToken	"\<kp\%([.=]\)\%([}\]]\)\@=" contained
 syn match knsModifier		"\<\%(kp-\)\?\(lshift\|rshift\|lwin\|rwin\|lalt\|ralt\|lctrl\|rctrl\)\>" contained
 
 syn region knsRemap		matchgroup=knsBrack nextgroup=knsLocationMap start="\[" end="\]" contains=knsLocationChar,knsLocationToken,knsModifier oneline
-syn region knsMacro		matchgroup=knsBrace nextgroup=knsMacroMap start="{" end="}" contains=knsMacroChar,knsLocationToken,knsModifier oneline
-syn region knsMacroModifier	matchgroup=knsBrace nextgroup=knsMacroMap start="{\z([+-]\)" end="\z1}" contains=knsModifier
+syn region knsMacro		matchgroup=knsBrace nextgroup=knsMacroMap start="{" end="}" contains=knsMacroChar,knsLocationToken,knsModifier,knsDelay,knsSpeed oneline
+syn region knsMacroModifier	matchgroup=knsBrace nextgroup=knsMacroMap start="{\%([+-]\)" end="}" contains=knsModifier
 
 hi def link knsComment Comment
 hi def link knsLocationMap Operator
