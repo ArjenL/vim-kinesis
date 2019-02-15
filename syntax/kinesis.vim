@@ -16,7 +16,7 @@ syn match knsLocationChar	"\[\@<=\%(kp-\)\?[a-z0-9\\',./;`=]\]\@=" contained
 syn match knsMacroChar		"{\@<=\%(kp-\)\?[a-z0-9\\',./;`=]}\@=" contained
 
 syn match knsLocationToken	"\%(kp-\)\?\(f\(1[0-9]\?\|2[0-4]\?\|[3-9]\)\)\]\@=" contained
-syn match knsLocationToken	"\<kp\%(div\|plus\|mult\|min\|enter1\|=mac\|toggle\|shift\|[0-9]\)\>" contained
+syn match knsLocationToken	"\<kp\%(div\|plus\|mult\|min\|enter[12]\|=mac\|toggle\|shift\|numlk\|[0-9]\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(obrack\|cbrack\|hyphen\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(bspace\|insert\|home\|escape\|caps\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(next\|prev\|play\|mute\)\>" contained
@@ -25,7 +25,7 @@ syn match knsLocationToken	"\<\%(kp-\)\?\(escape\|prtscr\|scroll\|caps\|pause\|c
 syn match knsLocationToken	"\<\%(kp-\)\?\(vol+\|vol-\|intl-\\\)\%([}\]]\)\@=" contained
 syn match knsLocationToken	"\<kp\%([.=]\)\%([}\]]\)\@=" contained
 
-syn match knsModifier		"\<\%(kp-\)\?\(lshift\|rshift\|lwin\|rwin\|lalt\|ralt\|lctrl\|rctrl\)\>" contained
+syn match knsModifier		"\<\%(kp-\)\?\([lr]\?shift\|lwin\|rwin\|lalt\|ralt\|lctrl\|rctrl\)\>" contained
 syn match knsModifier		"\<\%(speed[1-9]\)\>" contained
 syn match knsModifier		"\<\%(d\%(125\|500\)\)\>" contained
 
