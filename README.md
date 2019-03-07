@@ -6,10 +6,15 @@ Vim syntax highlighting of layout files for the
 
 ## Installation
 
+### with a package installer
+
 Clone the repository in the bundle directory of your favorite Vim
 package installer like [pathogen](https://github.com/tpope/vim-pathogen)
-or [Vundle](https://github.com/VundleVim/Vundle.Vim), or put the
-`syntax/kinesis.vim` file in your user runtime directory where syntax
+or [Vundle](https://github.com/VundleVim/Vundle.Vim)
+
+### manually
+
+Put the `syntax/kinesis.vim` file in your user runtime directory where syntax
 files are searched for by Vim (normally `$HOME/.vim/syntax`).
 
 To have Vim automatically detect the type of file, add the line
