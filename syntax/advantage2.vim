@@ -44,4 +44,4 @@ hi def link knsModifier Structure
 hi def link knsBrack Keyword
 hi def link knsBrace Keyword
 
-let b:current_syntax = "kinesis"
+let b:current_syntax = "advantage2"
