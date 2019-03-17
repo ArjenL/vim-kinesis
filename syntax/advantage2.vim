@@ -8,40 +8,40 @@ endif
 
 syn case ignore
 
-syn match knsComment		"*.*" contains=@Spell
-syn match knsLocationMap	">"
-syn match knsMacroMap		">"
+syn match advComment		"*.*" contains=@Spell
+syn match advLocationMap	">"
+syn match advMacroMap		">"
 
-syn match knsLocationChar	"\[\@<=\%(kp-\)\?[a-z0-9\\',./;`=]\]\@=" contained
-syn match knsMacroChar		"{\@<=\%(kp-\)\?[a-z0-9\\',./;`=]}\@=" contained
+syn match advLocationChar	"\[\@<=\%(kp-\)\?[a-z0-9\\',./;`=]\]\@=" contained
+syn match advMacroChar		"{\@<=\%(kp-\)\?[a-z0-9\\',./;`=]}\@=" contained
 
-syn match knsLocationToken	"\%(kp-\)\?\(f\(1[0-9]\?\|2[0-4]\?\|[3-9]\)\)\]\@=" contained
-syn match knsLocationToken	"\<kp\%(div\|plus\|mult\|min\|enter[12]\|=mac\|toggle\|[0-9]\)\>" contained
-syn match knsLocationToken	"\<\%(kp-\)\?\(obrack\|cbrack\|hyphen\)\>" contained
-syn match knsLocationToken	"\<\%(kp-\)\?\(bspace\|insert\|home\|escape\|caps\)\>" contained
-syn match knsLocationToken	"\<\%(kp-\)\?\(next\|prev\|play\|mute\)\>" contained
-syn match knsLocationToken	"\<\%(kp-\)\?\(enter\|tab\|space\|delete\|bspace\|insert\|home\|pup\|pdown\|left\|right\|up\|down\|end\)\>" contained
-syn match knsLocationToken	"\<\%(kp-\)\?\(escape\|prtscr\|scroll\|caps\|pause\|calc\|shutdn\|menu\|numlk\|null\)\>" contained
-syn match knsLocationToken	"\<\%(kp-\)\?\(vol+\|vol-\|intl-\\\)\%([}\]]\)\@=" contained
-syn match knsLocationToken	"\<kp\%([.=]\)\%([}\]]\)\@=" contained
+syn match advLocationToken	"\%(kp-\)\?\(f\(1[0-9]\?\|2[0-4]\?\|[3-9]\)\)\]\@=" contained
+syn match advLocationToken	"\<kp\%(div\|plus\|mult\|min\|enter[12]\|=mac\|toggle\|[0-9]\|\\\)\>" contained
+syn match advLocationToken	"\<\%(kp-\)\?\(obrack\|cbrack\|hyphen\)\>" contained
+syn match advLocationToken	"\<\%(kp-\)\?\(bspace\|insert\|home\|escape\|caps\)\>" contained
+syn match advLocationToken	"\<\%(kp-\)\?\(next\|prev\|play\|mute\)\>" contained
+syn match advLocationToken	"\<\%(kp-\)\?\(enter\|tab\|space\|delete\|bspace\|insert\|home\|pup\|pdown\|left\|right\|up\|down\|end\)\>" contained
+syn match advLocationToken	"\<\%(kp-\)\?\(escape\|prtscr\|scroll\|caps\|pause\|calc\|shutdn\|menu\|numlk\|null\)\>" contained
+syn match advLocationToken	"\<\%(kp-\)\?\(vol+\|vol-\|intl-\\\)\%([}\]]\)\@=" contained
+syn match advLocationToken	"\<kp\%([.=]\)\%([}\]]\)\@=" contained
 
-syn match knsModifier		"\<\%(kp-\)\?\([lr]\?shift\|lwin\|rwin\|lalt\|ralt\|lctrl\|rctrl\)\>" contained
-syn match knsModifier		"\<\%(kpshift\)\>" contained
-syn match knsModifier		"\<\%(speed[1-9]\)\>" contained
-syn match knsModifier		"\<\%(d\%(125\|500\)\)\>" contained
+syn match advModifier		"\<\%(kp-\)\?\([lr]\?shift\|lwin\|rwin\|lalt\|ralt\|lctrl\|rctrl\)\>" contained
+syn match advModifier		"\<\%(kpshift\)\>" contained
+syn match advModifier		"\<\%(speed[1-9]\)\>" contained
+syn match advModifier		"\<\%(d\%(125\|500\)\)\>" contained
 
-syn region knsRemap		matchgroup=knsBrack nextgroup=knsLocationMap start="\[" end="\]" contains=knsLocationChar,knsLocationToken,knsModifier oneline
-syn region knsMacro		matchgroup=knsBrace nextgroup=knsMacroMap start="{" end="}" contains=knsMacroChar,knsLocationToken,knsModifier,knsDelay,knsSpeed oneline
-syn region knsMacroModifier	matchgroup=knsBrace nextgroup=knsMacroMap start="{\%([+-]\)" end="}" contains=knsModifier
+syn region advRemap		matchgroup=advBrack nextgroup=advLocationMap start="\[" end="\]" contains=advLocationChar,advLocationToken,advModifier oneline
+syn region advMacro		matchgroup=advBrace nextgroup=advMacroMap start="{" end="}" contains=advMacroChar,advLocationToken,advModifier,advDelay,advSpeed oneline
+syn region advMacroModifier	matchgroup=advBrace nextgroup=advMacroMap start="{\%([+-]\)" end="}" contains=advModifier
 
-hi def link knsComment Comment
-hi def link knsLocationMap Operator
-hi def link knsMacroMap Operator
-hi def link knsLocationToken Constant
-hi def link knsLocationChar Constant
-hi def link knsMacroChar String
-hi def link knsModifier Structure
-hi def link knsBrack Keyword
-hi def link knsBrace Keyword
+hi def link advComment Comment
+hi def link advLocationMap Operator
+hi def link advMacroMap Operator
+hi def link advLocationToken Constant
+hi def link advLocationChar Constant
+hi def link advMacroChar String
+hi def link advModifier Structure
+hi def link advBrack Keyword
+hi def link advBrace Keyword
 
 let b:current_syntax = "advantage2"
