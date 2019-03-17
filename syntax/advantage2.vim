@@ -15,7 +15,7 @@ syn match knsMacroMap		">"
 syn match knsLocationChar	"\[\@<=\%(kp-\)\?[a-z0-9\\',./;`=]\]\@=" contained
 syn match knsMacroChar		"{\@<=\%(kp-\)\?[a-z0-9\\',./;`=]}\@=" contained
 
-syn match knsLocationToken	"\%(kp-\)\?\(f\(1[0-9]\?\|2[0-4]\?\|[3-9]\)\)\]\@=" contained
+syn match knsLocationToken	"\%(kp-\)\?\(f\(1[0-9]\?\|2[0-4]\?\|[3-9]\)\)[\]}]\@=" contained
 syn match knsLocationToken	"\<kp\%(div\|plus\|mult\|min\|enter[12]\|=mac\|toggle\|[0-9]\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(obrack\|cbrack\|hyphen\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(bspace\|insert\|home\|escape\|caps\)\>" contained
