@@ -23,7 +23,7 @@ syn match knsLocationToken	"\<\%(kp-\)\?\(next\|prev\|play\|mute\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(enter\|tab\|space\|delete\|bspace\|insert\|home\|pup\|pdown\|left\|right\|up\|down\|end\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(escape\|prtscr\|scroll\|caps\|pause\|calc\|shutdn\|menu\|numlk\|null\)\>" contained
 syn match knsLocationToken	"\<\%(kp-\)\?\(vol+\|vol-\|intl-\\\)\%([}\]]\)\@=" contained
-syn match knsLocationToken	"\<kp\%([.=]\)\%([}\]]\)\@=" contained
+syn match knsLocationToken	"\<kp\%([.=\\]\)\%([}\]]\)\@=" contained
 
 syn match knsModifier		"\<\%(kp-\)\?\([lr]\?shift\|lwin\|rwin\|lalt\|ralt\|lctrl\|rctrl\)\>" contained
 syn match knsModifier		"\<\%(kpshift\)\>" contained
