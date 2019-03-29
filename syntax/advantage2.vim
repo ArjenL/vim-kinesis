@@ -13,6 +13,7 @@ syn match advLocationMap	">"
 syn match advMacroMap		">"
 
 syn match advLocationChar	"\[\@<=\%(kp-\)\?[a-z0-9\\',./;`=]\]\@=" contained
+syn match advLocationCode	"\[\@<=\(0\{1,2}[1-9]\|0\?[1-9][0-9]\?\|1[0-589][0-9]\|16[0-4]\|17[6-9]\|2[013-9][0-9]\|22[014-9]\)\]\@=" contained
 syn match advMacroChar		"{\@<=\%(kp-\)\?[a-z0-9\\',./;`=]}\@=" contained
 
 syn match advLocationToken	"\%(kp-\)\?\(f\(1[0-9]\?\|2[0-4]\?\|[3-9]\)\)[\]}]\@=" contained
@@ -30,7 +31,7 @@ syn match advModifier		"\<\%(kpshift\)\>" contained
 syn match advModifier		"\<\%(speed[1-9]\)\>" contained
 syn match advModifier		"\<\%(d\%(125\|500\)\)\>" contained
 
-syn region advRemap		matchgroup=advBrack nextgroup=advLocationMap start="\[" end="\]" contains=advLocationChar,advLocationToken,advModifier oneline
+syn region advRemap		matchgroup=advBrack nextgroup=advLocationMap start="\[" end="\]" contains=advLocationChar,advLocationCode,advLocationToken,advModifier oneline
 syn region advMacro		matchgroup=advBrace nextgroup=advMacroMap start="{" end="}" contains=advMacroChar,advLocationToken,advModifier,advDelay,advSpeed oneline
 syn region advMacroModifier	matchgroup=advBrace nextgroup=advMacroMap start="{\%([+-]\)" end="}" contains=advModifier
 
@@ -39,6 +40,7 @@ hi def link advLocationMap Operator
 hi def link advMacroMap Operator
 hi def link advLocationToken Constant
 hi def link advLocationChar Constant
+hi def link advLocationCode Constant
 hi def link advMacroChar String
 hi def link advModifier Structure
 hi def link advBrack Keyword
