@@ -26,11 +26,11 @@ syn match fstLocationToken	"\<\%(vol+\|vol-\|intl/\|kp*\|kp.\|kp-\|kp+\)[\]}]\@=
 
 syn match fstModifier		"\<\%([lr]\%(shft\|win\|alt\|ctrl\)\)\>" contained
 syn match fstModifier		"\<\%(d\%(125\|500\)\)\>" contained
-syn match fstMacroPlaybackSpdPfx	"{\@<=s[1-9]}" contained
-syn match fstMacroMultiplayPfx	"{\@<=x[1-9]}" contained
+syn match fstMacroPlaybackSpeedPrefix	"{\@<=s[1-9]}" contained
+syn match fstMacroMultiplayPrefix	"{\@<=x[1-9]}" contained
 
 syn region fstRemap		matchgroup=fstBrack nextgroup=fstLocationMap start="\[" end="\]" contains=fstLocationChar,fstLocationToken,fstModifier oneline
-syn region fstMacro		matchgroup=fstBrace nextgroup=fstMacroMap start="{" end="}" contains=fstMacroChar,fstLocationToken,fstModifier,fstDelay,fstSpeed,fstMacroPbkSpd,fstMacroMltPly oneline
+syn region fstMacro		matchgroup=fstBrace nextgroup=fstMacroMap start="{" end="}" contains=fstMacroChar,fstLocationToken,fstModifier,fstDelay,fstSpeed,fstMacroPlaybackSpeedPrefix,fstMacroMultiplayPrefix oneline
 syn region fstMacroModifier	matchgroup=fstBrace nextgroup=fstMacroMap start="{\%([+-]\)" end="}" contains=fstModifier
 syn match fstFn			"fn" contains=fstRemap,fstMacro,fstMacroModifier
 
@@ -40,8 +40,8 @@ hi def link fstMacroMap Operator
 hi def link fstLocationToken Constant
 hi def link fstLocationChar Constant
 hi def link fstMacroChar String
-hi def link fstMacroPlaybackSpdPfx Structure
-hi def link fstMacroMultiplayPfx Structure
+hi def link fstMacroPlaybackSpeedPrefix Structure
+hi def link fstMacroMultiplayPrefix Structure
 hi def link fstModifier Structure
 hi def link fstBrack Keyword
 hi def link fstBrace Keyword
