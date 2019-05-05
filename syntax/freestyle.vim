@@ -21,9 +21,9 @@ syn match fstLocationToken	"\<\%(hk\%(10\?\|[2-9]\)\)\>" contained
 syn match fstLocationToken	"\<\%(obrk\|cbrk\|per\|com\|apos\|tilde\)\>" contained
 syn match fstLocationToken	"\<\%(mute\|play\|next\|prev\|lmous\|rmous\|mmous\|mous4\|mous5\)\>" contained
 syn match fstLocationToken	"\<\%(ent\|tab\|spc\|del\|bspc\|home\|end\|pup\|pdn\|lft\|rght\|up\|dwn\|esc\|prnt\|pause\|scrlk\|ins\)\>" contained
-syn match fstLocationToken	"\<\%(numlk\|kp1\|kp2\|kp3\|kp4\|kp5\|kp6\|kp7\|kp8\|kp9\|kp0\|kpent\|kp=\)\>" contained
+syn match fstLocationToken	"\<\%(numlk\|kp1\|kp2\|kp3\|kp4\|kp5\|kp6\|kp7\|kp8\|kp9\|kp0\|kpent\)\>" contained
 syn match fstLocationToken	"\<\%(caps\|fntog\|fnshf\|menu\|calc\|shtdn\|led\|null\)\>" contained
-syn match fstLocationToken	"\<\%(vol+\|vol-\|intl/\|kp*\|kp.\|kp-\|kp+\)[\]}]\@=" contained
+syn match fstLocationToken	"\<\%(vol+\|vol-\|intl/\|kp\*\|kp\.\|kp-\|kp+\|kp=\|kp/\)[\]}]\@=" contained
 
 syn match fstModifier		"\<\%([lr]\%(shft\|win\|alt\|ctrl\)\)\>" contained
 syn match fstModifier		"\<\%(t&h\|d\)\%(ran\|\%([1-9][0-9]\{0,2}\)\)\>" contained
