@@ -27,6 +27,7 @@ syn match fstLocationToken	"\<\%(vol+\|vol-\|intl/\|kp*\|kp.\|kp-\|kp+\)[\]}]\@=
 
 syn match fstModifier		"\<\%([lr]\%(shft\|win\|alt\|ctrl\)\)\>" contained
 syn match fstModifier		"\<\%(d\%(125\|500\)\)\>" contained
+syn match fstModifier		"\<\%(hyper\|meh\)\>" contained
 syn match fstMacroPlaybackSpeedPrefix	"{\@<=s[1-9]}" contained
 syn match fstMacroMultiplayPrefix	"{\@<=x[1-9]}" contained
 
