@@ -30,7 +30,7 @@ syn match advModifier		"\<\%(kp-\)\?\([lr]\?shift\|lwin\|rwin\|lalt\|ralt\|lctrl
 syn match advModifier		"\<\%(kpshift\)\>" contained
 syn match advModifier		"\<\%(speed[1-9]\)\>" contained
 syn match advModifier		"\<\%(d\%(125\|500\)\)\>" contained
-syn match advModifier		"\<\%(t&h[0-9]\{1,2}\|hyper\|meh\)\>" contained
+syn match advModifier		"\<\%(t&h[1-9][0-9]\{1,2}\|hyper\|meh\)\>" contained
 
 syn region advRemap		matchgroup=advBrack nextgroup=advLocationMap start="\[" end="\]" contains=advLocationChar,advLocationCode,advLocationToken,advModifier oneline
 syn region advMacro		matchgroup=advBrace nextgroup=advMacroMap start="{" end="}" contains=advMacroChar,advLocationToken,advModifier,advDelay,advSpeed oneline
