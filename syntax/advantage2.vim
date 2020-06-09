@@ -24,6 +24,7 @@ syn match advLocationToken	"\<\%(kp-\)\?\(next\|prev\|play\|mute\)\>" contained
 syn match advLocationToken	"\<\%(kp-\)\?\(enter\|tab\|space\|delete\|bspace\|insert\|home\|pup\|pdown\|left\|right\|up\|down\|end\)\>" contained
 syn match advLocationToken	"\<\%(kp-\)\?\(escape\|prtscr\|scroll\|caps\|pause\|calc\|shutdn\|menu\|numlk\|null\)\>" contained
 syn match advLocationToken	"\<\%(kp-\)\?\(vol+\|vol-\|intl-\\\)\%([}\]]\)\@=" contained
+syn match advLocationToken	"\<\%(kp-\)\?\(lp-tab\|mp-kpshf\|rp-kpent\)\>" contained
 syn match advLocationToken	"\<kp\%([.=\\]\)\%([}\]]\)\@=" contained
 
 syn match advModifier		"\<\%(kp-\)\?\([lr]\?shift\|lwin\|rwin\|lalt\|ralt\|lctrl\|rctrl\)\>" contained
